@@ -1,0 +1,103 @@
+body{
+    /* background-color: rgb(192, 189, 189); */
+    background-color: rgb(192, 189, 189);
+    font-family:system-ui ;
+}
+.container{
+    position: relative;
+}
+.head{
+    display: flex;
+    justify-content:center;
+    background-color:rgb(15, 71, 117);
+    color:white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.container .intro{
+    background-color:white;
+    /* bottom: 5px; */
+    top:100px;
+    height:500px;
+    border:1px ;
+    border-radius:10px;
+    position: absolute;
+    width: 370px;
+    display:flex;
+    margin-left:100px ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow:0 3px 20px rgb(117, 128, 138);
+}
+.container .intro h2{
+    position: absolute;
+    font-weight: 500;
+    top:-15px;
+}
+.container .intro h4{
+    position: absolute;
+    font-weight: 300;
+    top: 40px;
+    margin-left:10px;
+}
+.container .intro img{
+    position: absolute;
+    top:250px;
+    height:250px;
+    width:250px;
+}
+.container .spec{
+    box-shadow:0 3px 20px rgb(120, 135, 150);
+    background-color:white;
+    top:300px;
+    height:300px;
+    border:1px;
+    border-radius:10px;
+    position: absolute;
+    width: 350px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left:510px ;
+}
+.container .spec h2{
+    font-weight: 500;
+    margin-top: 5px;
+}
+.container .spec img{
+    height: 250px;
+    width:250px;
+    margin-bottom: 10px;
+}
+.container .method{
+    box-shadow:0 5px 20px rgb(95, 111, 128);
+    background-color:white;
+    margin-top:15px;
+    border: 1px ;
+    width:370px;
+    border-radius:10px;
+    position:absolute;
+    right:10px;
+    top:85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+}
+.container .method h2{
+    font-weight: 500;
+    margin-top: 5px;
+}
+.container .method h4{
+    font-weight: 100;
+    margin-top: 0px;
+    margin-left:10px;
+}
+.container .method img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+}

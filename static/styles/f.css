@@ -1,0 +1,116 @@
+body {
+    /* background-color: rgb(192, 189, 189); */
+    background-color: rgba(163, 211, 235, 0.749);
+    font-family: system-ui;
+}
+
+.container {
+    position: relative;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(15, 71, 117);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.container .intro {
+    background-color: white;
+    /* bottom: 5px; */
+    top: 170px;
+    height: 500px;
+    border: 1px;
+    border-radius: 10px;
+    position: absolute;
+    width: 400px;
+    display: flex;
+    margin-left: 70px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 3px 20px rgb(117, 128, 138);
+}
+
+.container .intro h2 {
+    position: absolute;
+    font-weight: 500;
+    top: -15px;
+}
+
+.container .intro h4 {
+    position: absolute;
+    font-weight: 300;
+    top: 40px;
+    margin-left: 10px;
+}
+
+.container .intro img {
+    position: absolute;
+    top: 250px;
+    width: 390px;
+    height: 225px;
+}
+
+.container .method {
+    box-shadow: 0 5px 20px rgb(95, 111, 128);
+    background-color: white;
+    margin-top: 15px;
+    border: 1px;
+    width: 400px;
+    /* height:650; */
+    border-radius: 10px;
+    position: absolute;
+    right: 480px;
+    top: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.container .method h2 {
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.container .method h4 {
+    font-weight: 100;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.container .method img {
+    width: 390px;
+    height: 225px;
+    margin-bottom: 50px;
+}
+
+
+.container .DYNAMIC{
+    background-color:rgb(255, 255, 255);
+    /* bottom: 5px; */
+    top:250px;
+    right:15px;
+    height:400px;
+    border:1px ;
+    border-radius:10px;
+    position: absolute;
+    width: 370px;
+    display:flex;
+    margin-right:50px ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow:0 3px 20px rgb(117, 128, 138);
+    padding:10px;
+}
+.container .DYNAMIC img{
+    width: 85%;
+    height: 85%;
+    margin-bottom: 50px;
+    
+}

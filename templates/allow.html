@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recognizer</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/f.css')}}" />
+    
+</head>
+<body >
+    <div class="container">
+
+        <div class="head">
+            <h3>Speech Recognizer</h3>
+    </div>
+    <div class="prediction" >
+        <form action="/audio" method="post" style=" display: flex; flex-direction:column;position: relative;">
+    <button class="btn" style="cursor: pointer; position:absolute; width:150px; left:1150px; top:40px; padding:8px; border: none; border-radius: 5px; background-color: rgb(26, 12, 103); color: white;" type = "submit">
+        Predict
+    </button>
+
+        <label style="background: white">
+            <h4 style="position:absolute; left:1100px;font-weight: 450;text-align: center; top:100px; padding:8px; width: 240px; padding:8px; border-radius: 5px;color:black; background: white;"class="label">
+                {{prediction}}
+            </h4>
+             </label>
+        <label>
+            {{word}}
+        </label>
+    </form>
+</div>
+<div class="intro" >
+    <h2>Feature Extraction</h2>
+    <h4>We are using the MFCC technique (Mel Frequency Cepstral Coefficient) to extract the voice feature of the person.MFCC is considered the pitch of the human voice in the frequency form which scale them on the mel scale and these Features are unique to others.
+    after extracting feature, the system is be ready for training and test the machine learning model.  </h4>
+        <!-- <img src="{{ url_for('static',filename='fig.png') }}"   alt="Cinque Terre" width="800" height="800"> -->
+        <img src="{{ url_for('static',filename= 'styles/img/D.png')}}"   alt="Cinque Terre" width="2000" height="2000">
+        
+ </div>
+
+<div class="method">
+    <h2>Model-GMM</h2>
+    <h4>In the training of the model, we use the Gaussian Mixture Modeling to train the extracted features.
+        The Gaussian Mixture Modeling is a model assumes each data cluster as a different gaussian distribution and baesd on the probability whih the data came out,it store on the data base. 
+        So in the matching process,the system will match person voice to the voice in the database.
+    </h4>
+    <img src="{{ url_for('static',filename= 'styles/img/plot.png')}}"   alt="Cinque Terre" width="2000" height="2000">
+</div>
+<div class="DYNAMIC" >
+        <!-- <img src="{{ url_for('static',filename='fig.png') }}"   alt="Cinque Terre" width="800" height="800"> -->
+        <img src="{{ url_for('static',filename= 'styles/img/Normal.png')}}"   alt="Cinque Terre" width="2000" height="2000">
+ </div>
+
+</div>
+</body>
+</html>
