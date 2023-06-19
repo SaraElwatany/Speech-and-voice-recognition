@@ -1,7 +1,7 @@
 # Speech And Voice Recognition System Using GMM Model
 
 # Abstract
-
+The above project was a collaborative university project, where we used "GMM" to recognize the speech patterns for different words and the voice of the team's members. Where for the "Voice Recognition" part, we recorded about 5 samples for each group member with the write sentence to say, "Open the door", and then we built our models for each member after extracting the features from them "FeatureExtraction.py", to get the write person we used the loglikelihood as our similarity score, where for each prediction we get the similarity for each model and then we assign the user of the application to the member corresponding to the highest similarity score from the models but only after comparing with a certain thresholds (bounds), otherwise the person won't be allowed to have "Access".  Where for the "Speech Recognition" part, we recorded about 15 samples for each wrong sentence, "Open the book", "Open the window", "Please open", and then we seeked the same approach as above for each wrong sentence by making a model followed by similarity score calculation for each trial and then comparing the similarity score with certain thresholds.
 
 ## Snapshots
 - Correct word & User
@@ -12,10 +12,12 @@
 
 ## Note
 - Don't forget to modify the paths present in the main.py to match your own.
-- The "svm1" and "svm2" files were only for our own trials and has nothing to do with running the project
+- The "svm1.py" and "svm2.py" files were only for our own tests and has nothing to do with running the project.
 
-## Requirements
+## Languages Used
 - Python
+- HTML
+- CSS
 
 ## How to run
 - Clone the repository
