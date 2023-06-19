@@ -7,7 +7,7 @@ The above project was a collaborative university project, where we used "GMM" to
 - Correct Sentence & User
 ![2023-06-19 (6)](https://github.com/SaraElwatany/Speech-and-voice-recognition/assets/93448764/18a6c093-32e9-4a3a-9919-0abbde7512ef)
 
-- Correct Sentence but wrong word
+- Correct User but wrong Sentence
 ![2023-06-19 (7)](https://github.com/SaraElwatany/Speech-and-voice-recognition/assets/93448764/bfc09576-4dab-4060-8201-195578b24147)
 
 ## Note
