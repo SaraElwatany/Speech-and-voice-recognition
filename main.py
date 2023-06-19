@@ -26,15 +26,12 @@ warnings.filterwarnings("ignore")
 
 class variables:
     counter = 0
+#path to training data   
+modelpath = "D:/New folder/Speech-and-voice-recognition/Testing_Models/"   
 #path to training data
-#source   = "Build_Set/"   
-modelpath = "Testing_Models/"
-#test_file1 = "Build_Set_Text.txt"        
-#file_paths1 = open(test_file1,'r')     
-#path to training data
-source   = "Testing_Audio/"   
+source   = "D:/New folder/Speech-and-voice-recognition/Testing_Audio/"   
 #path where training speakers will be saved
-modelpath = "Trained_Speech_Models/"
+modelpath = "D:/New folder/Speech-and-voice-recognition/Trained_Speech_Models/"
 
 gmm_files1 = [os.path.join(modelpath+'voice/',fname) for fname in os.listdir(modelpath+'voice/') if fname.endswith('.gmm')]
 #Load the Gaussian gender Models
@@ -52,9 +49,12 @@ input_mean= []
 
 app = Flask(__name__)
 
+
+
 @app.route("/")
 def index():
     return render_template('allow.html')
+
 
 
 def preProcessing(winner1):
@@ -102,6 +102,7 @@ def preProcessing(winner1):
 
 
 
+
 @app.route("/audio",methods = ['GET','POST'])
 def audio():   
     fs = 22050 # Sample rate
@@ -116,16 +117,22 @@ def audio():
     return render_template('allow.html', Encode_img_data_2= model(dataWinner, input_mean)  ,Encode_img_data= create_normal_img( "output.wav") ,prediction=prediction)
 
 
+
+
+
 def features_extractor(file):
     audio, sample_rate = librosa.load(file, res_type='kaiser_fast') 
     mfccs_features = librosa.feature.mfcc(y=audio, sr=sample_rate, n_mfcc=46)
-#     mfccs_scaled_features = np.mean(mfccs_features.T,axis=0)
+#   mfccs_scaled_features = np.mean(mfccs_features.T,axis=0)
     return mfccs_features[22]
 
+
+
+
 def create_normal_img(filename):
-    amar_f = features_extractor("graph_records\\amar3.wav")
-    rawan_f = features_extractor("graph_records\\rawan2.wav")
-    sara_f = features_extractor("graph_records\\sara9.wav")
+    amar_f = features_extractor("D:\\New folder\\Speech-and-voice-recognition\\graph_records\\amar3.wav")
+    rawan_f = features_extractor("D:\\New folder\\Speech-and-voice-recognition\\graph_records\\rawan2.wav")
+    sara_f = features_extractor("D:\\New folder\\Speech-and-voice-recognition\\graph_records\\sara9.wav")
     other_f = features_extractor(filename)
     #define multiple normal distributions
     plt.plot(amar_f, norm.pdf(amar_f, np.mean(amar_f), np.std(amar_f)), label='amar', color='violet')
@@ -136,10 +143,10 @@ def create_normal_img(filename):
     plt.ylabel('Density')
     plt.xlabel('MFCC')
     plt.title('Normal Distributions', fontsize=14)
-    plt.savefig('static/styles/img/Normal.png',bbox_inches='tight',pad_inches=0)
+    plt.savefig('D:/New folder/Speech-and-voice-recognition/static/styles/img/Normal.png',bbox_inches='tight',pad_inches=0)
     plt.tight_layout()
     plt.close()
-    im = Image.open('static/styles/img/Normal.png')
+    im = Image.open('D:/New folder/Speech-and-voice-recognition/static/styles/img/Normal.png')
     data = io.BytesIO()
     im.save(data,"PNG")
     encode_img_data = base64.b64decode(data.getvalue())
@@ -186,10 +193,10 @@ def model(winner,input_mean):
             plt.axhline(y=-28, linewidth=3, color='b')
             plt.axhline(y=-34.6,linewidth=3, color='g')
             plt.axhline(y=-45.9, linewidth=3, color='g')
-            plt.savefig('static/styles/img/plot.png',bbox_inches='tight',pad_inches=0)
+            plt.savefig('D:/New folder/Speech-and-voice-recognition/static/styles/img/plot.png',bbox_inches='tight',pad_inches=0)
             plt.tight_layout()
             plt.close()
-            im = Image.open('static/styles/img/plot.png')
+            im = Image.open('D:/New folder/Speech-and-voice-recognition/static/styles/img/plot.png')
             data = io.BytesIO()
             im.save(data,"PNG")
             encode_img_data = base64.b64decode(data.getvalue())
@@ -209,10 +216,10 @@ def model(winner,input_mean):
             plt.axhline(y=-28, linewidth=3, color='b')
             plt.axhline(y=-34.6,linewidth=3, color='g')
             plt.axhline(y=-45.9, linewidth=3, color='g')
-            plt.savefig('static/styles/img/plot.png',bbox_inches='tight',pad_inches=0)
+            plt.savefig('D:/New folder/Speech-and-voice-recognition/static/styles/img/plot.png',bbox_inches='tight',pad_inches=0)
             plt.tight_layout()
             plt.close()
-            im = Image.open('static/styles/img/plot.png')
+            im = Image.open('D:/New folder/Speech-and-voice-recognition/static/styles/img/plot.png')
             data = io.BytesIO()
             im.save(data,"PNG")
             encode_img_data = base64.b64decode(data.getvalue())
@@ -232,10 +239,10 @@ def model(winner,input_mean):
             plt.axhline(y=-28, linewidth=3, color='b')
             plt.axhline(y=-34.6,linewidth=3, color='g')
             plt.axhline(y=-45.9, linewidth=3, color='g')
-            plt.savefig('static/styles/img/plot.png',bbox_inches='tight',pad_inches=0)
+            plt.savefig('D:/New folder/Speech-and-voice-recognition/static/styles/img/plot.png',bbox_inches='tight',pad_inches=0)
             plt.tight_layout()
             plt.close()
-            im = Image.open('static/styles/img/plot.png')
+            im = Image.open('D:/New folder/Speech-and-voice-recognition/static/styles/img/plot.png')
             data = io.BytesIO()
             im.save(data,"PNG")
             encode_img_data = base64.b64decode(data.getvalue())

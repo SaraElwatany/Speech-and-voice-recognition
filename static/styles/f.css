@@ -1,21 +1,29 @@
 body {
-    /* background-color: rgb(192, 189, 189); */
-    background-color: rgba(163, 211, 235, 0.749);
+    /*background-color: rgba(163, 211, 235, 0.749);
+    background: rgb(40,233,156);*/
+    background: rgb(255,57,18);
+    background: linear-gradient(90deg, rgba(255,57,18,1) 1%, rgba(17,50,255,1) 23%, rgba(117,124,255,1) 52%, rgba(17,50,255,1) 83%, rgba(232,43,19,1) 96%);
     font-family: system-ui;
 }
+
 
 .container {
     position: relative;
 }
 
+
 .head {
     display: flex;
     justify-content: center;
-    background-color: rgb(15, 71, 117);
+    background: rgb(22,19,232);
+    background: linear-gradient(90deg, rgba(22,19,232,1) 29%, rgba(253,29,29,0.9360994397759104) 52%, rgba(22,19,232,1) 77%);
     color: white;
+    font-size: 20px;
+    font-weight: bold;
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
 
 .container .intro {
     background-color: white;
@@ -34,11 +42,13 @@ body {
     box-shadow: 0 3px 20px rgb(117, 128, 138);
 }
 
+
 .container .intro h2 {
     position: absolute;
     font-weight: 500;
     top: -15px;
 }
+
 
 .container .intro h4 {
     position: absolute;

@@ -12,16 +12,38 @@
     <div class="container">
 
         <div class="head">
-            <h3>Speech Recognizer</h3>
+            <h3>Speech And Voice Recognizer</h3>
     </div>
     <div class="prediction" >
         <form action="/audio" method="post" style=" display: flex; flex-direction:column;position: relative;">
-    <button class="btn" style="cursor: pointer; position:absolute; width:150px; left:1150px; top:40px; padding:8px; border: none; border-radius: 5px; background-color: rgb(26, 12, 103); color: white;" type = "submit">
-        Predict
+    <button class="btn" style="cursor: pointer; position:absolute; width:150px; left:1190px; top:40px; padding:8px; border: none; border-radius: 5px;
+    background-color:rgb(68,213,218);
+    background: linear-gradient(90deg, rgba(68,213,218,1) 0%, rgba(54,239,69,1) 45%, rgba(68,213,218,1) 100%, rgba(66,237,65,1) 100%);
+    color: white;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    -webkit-box-shadow: 0px 1px 3px #ee18f5;
+    -moz-box-shadow: 0px 1px 3px #ee18f5;
+    box-shadow: 0px 1px 3px #ee18f5;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none; " type = "submit"> Predict
+    
+        
     </button>
 
         <label style="background: white">
-            <h4 style="position:absolute; left:1100px;font-weight: 450;text-align: center; top:100px; padding:8px; width: 240px; padding:8px; border-radius: 5px;color:black; background: white;"class="label">
+            <h4 style="position:absolute; left:1100px;font-weight: 450;text-align: center; top:90px; 
+            padding:8px; width: 240px; padding:8px; border-radius: 5px;color:black; 
+            left:1140px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color:rgb(68,213,218);
+            background: linear-gradient(90deg, rgba(68,213,218,1) 0%, rgba(54,239,69,1) 45%, rgba(68,213,218,1) 100%, rgba(66,237,65,1) 100%);"class="label">
                 {{prediction}}
             </h4>
              </label>
